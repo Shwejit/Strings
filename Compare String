@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string compare(string S[], int n) {
+    string largest = S[0];
+    for (int i = 1; i < n; i++) {
+        if (largest.compare(S[i]) < 0)
+            largest = S[i];
+    }
+    return largest;
+}
+
+int main() {
+    string S[] = {"Apple", "Applh"};
+    int n = sizeof(S) / sizeof(S[0]);
+    cout << compare(S, n) << endl;
+    return 0;
+}
